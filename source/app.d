@@ -45,7 +45,7 @@ void main()
     CUdeviceptr devBufferA;
     CUdeviceptr devBufferB;
     CUdeviceptr devBufferC;
-    size_t n = 16;
+    uint n = 16;
 
     checkCudaErrors(cuMemAlloc(&devBufferA, float.sizeof * n));
     checkCudaErrors(cuMemAlloc(&devBufferB, float.sizeof * n));
