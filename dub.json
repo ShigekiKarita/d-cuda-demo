@@ -1,0 +1,13 @@
+{
+	"name": "d-cuda-demo",
+	"authors": [
+		"karita"
+	],
+	"dependencies": {
+		"d-nv": "~>0.0.1",
+		"derelict-cuda": "~>3.1.1"
+	},
+	"description": "CUDA example of D",
+	"copyright": "Copyright © 2018, karita",
+	"license": "BSL-1.0"
+}
