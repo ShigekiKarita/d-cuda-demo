@@ -71,13 +71,12 @@ void main()
     params[1] = &devBufferA;
     params[2] = &devBufferB;
     params[3] = &n;
-    // auto KernelParams = cast(void*[]) [ &devBufferC, 1.0, &devBufferA, &devBufferB, 16 ];
+
     // Kernel launch
     checkCudaErrors(cuLaunchKernel(cuFunction,
                                    1U, 1U, 1U, // grids
-                                   16U, 1U, 1U, // blocks
+                                   n, 1U, 1U, // blocks
                                    0, null, params.ptr, null));
-
 
     // Retrieve device data
     checkCudaErrors(cuMemcpyDtoH(&hostC[0], devBufferC, float.sizeof * n));
