@@ -1,4 +1,5 @@
-import ldc.dcompute : GlobalPointer, kernel;
+@compute(CompileFor.deviceOnly) module saxpy;
+import ldc.dcompute : GlobalPointer, kernel, compute, CompileFor;
 
 pure nothrow @nogc extern (C):
 
